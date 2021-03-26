@@ -1,0 +1,161 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,400;0,900;1,300&display=swap');
+
+* {
+  --dark-red: #be3144;
+}
+
+body {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: 'Lato', sans-serif;
+  font-size: 16px;
+}
+
+#navbar {
+  position: fixed;
+  width: 100%;
+  height: 80px;
+  background-color: var(--dark-red);
+  top: 0;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+#navbar a {
+  text-decoration: none;
+  font-size: 1.5rem;
+  color: white;
+  margin: 1.5rem;
+}
+
+#welcome-section {
+  background-color: #201f22;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+h1 {
+  color: #f0f0f0;
+  font-weight: 700;
+  font-size: 3.5rem;
+  margin: 0;
+}
+#welcome-section p {
+  font-style: italic;
+  color: var(--dark-red);
+  font-weight: 300;
+  font-size: 2rem;
+  margin: 0;
+}
+
+
+#projects {
+  text-align: center;
+  background-color: #45567d;
+  color: white;
+  padding-top: 80px;
+}
+
+#projects h2 {
+  font-size: 40px;
+  padding: 0.5rem 1em;
+  border-bottom: 2px solid white;
+  width: fit-content;
+  margin: 1.2em auto;
+}
+
+#projects .container {
+  display: grid;
+  max-width: 1200px;
+  height: fit-content;
+  grid-template: 1fr 1fr / 1fr 1fr 1fr;
+  grid-gap: 30px;
+  margin: 0 auto;
+}
+
+.project-tile {
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #303841;
+  height: 480px;
+}
+
+.project-tile img {
+  height: 400px;
+}
+
+.project-tile h4 {
+  color: white;
+  font-family: inherit;
+  font-weight: normal;
+  font-size: 1.5rem;
+  margin: auto;
+}
+
+#projects button {
+  margin-top: 50px;
+  margin-bottom: 80px;
+  color: white;
+  background-color: #303841;
+  padding: 0.3em 1.2em;
+  font-size: 1.5rem;
+  border: none;
+}
+
+#contact {
+  background-color: #303841;
+  color: white;
+  height: 80vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+#contact p {
+  font-size: 1.5rem;
+  font-style: italic;
+  font-weight: 300;
+  margin: 0;
+}
+
+a {
+  text-decoration: none;
+  color: #f0f0f0;
+}
+
+#contact .container {
+  margin: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#contact a {
+  font-size: 1.6rem;
+  font-weight: normal;
+  margin: 1em;
+}
+
+@media (max-width: 768px) {
+  #projects .container {
+    max-width: 750px;
+    height: fit-content;
+    grid-template: 1fr 1fr 1fr / 1fr 1fr;
+  }
+}
+
+@media (max-width: 480px) {
+  #projects .container {
+    max-width: 450px;
+    height: fit-content;
+    grid-template-rows: repeat(6,1fr);
+  }
+}
